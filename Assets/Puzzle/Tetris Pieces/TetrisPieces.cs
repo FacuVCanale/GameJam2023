@@ -8,6 +8,9 @@ public class TetrisPieces : MonoBehaviour
     public float stepDelay;
     private float timer = 0;
 
+    public Vector3 verticalOffset;
+    public Vector3 horizontalOffset;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7919486161037585636}
+  - component: {fileID: 7394123255398702338}
   - component: {fileID: 3336488226862181472}
   - component: {fileID: 4000911923549729130}
-  - component: {fileID: 7394123255398702338}
   m_Layer: 0
   m_Name: Tetris_0
   m_TagString: Untagged
@@ -28,12 +28,28 @@ Transform:
   m_GameObject: {fileID: 1283231420665104299}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.609839, y: 10.353474, z: 5.9388466}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 100, y: 100, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7394123255398702338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283231420665104299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dafe8fc96bd9fa94b9899d949b93fee2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDirection: {x: 0, y: 0, z: 0}
+  stepDelay: 0.8
+  verticalOffset: {x: 0.5, y: 0, z: 0}
+  horizontalOffset: {x: 0, y: 0, z: 0}
 --- !u!212 &3336488226862181472
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -113,17 +129,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7394123255398702338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283231420665104299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dafe8fc96bd9fa94b9899d949b93fee2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveDirection: {x: 0, y: 0, z: 0}
-  stepDelay: 0.8

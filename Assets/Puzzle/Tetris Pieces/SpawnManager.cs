@@ -27,26 +27,33 @@ public class SpawnManager : MonoBehaviour
 
    int randomIndex = Random.Range(0, 4);
    Transform spawner;
+
+    Vector3 offset;
+
    switch (randomIndex)
     {
         case 0:
             spawner = leftWallSpawners[Random.Range(0, leftWallSpawners.Count)];
-            spawned = Instantiate(randomSpawnable, spawner.position, spawner.rotation);
+            offset = randomSpawnable.GetComponent<TetrisPieces>().horizontalOffset;
+            spawned = Instantiate(randomSpawnable, spawner.position + offset, spawner.rotation);
             spawned.GetComponent<TetrisPieces>().moveDirection = Vector3.right;
             break;
         case 1:
             spawner = rightWallSpawners[Random.Range(0, rightWallSpawners.Count)];
-            spawned = Instantiate(randomSpawnable, spawner.position, spawner.rotation);
+            offset = randomSpawnable.GetComponent<TetrisPieces>().horizontalOffset;
+            spawned = Instantiate(randomSpawnable, spawner.position + offset, spawner.rotation);
             spawned.GetComponent<TetrisPieces>().moveDirection = Vector3.left;
             break;
         case 2:
             spawner = topWallSpawners[Random.Range(0, topWallSpawners.Count)];
-            spawned = Instantiate(randomSpawnable, spawner.position, spawner.rotation);
+            offset = randomSpawnable.GetComponent<TetrisPieces>().verticalOffset;
+            spawned = Instantiate(randomSpawnable, spawner.position + offset, spawner.rotation);
             spawned.GetComponent<TetrisPieces>().moveDirection = Vector3.down;
             break;
         case 3:
             spawner = bottomWallSpawners[Random.Range(0, bottomWallSpawners.Count)];
-            spawned = Instantiate(randomSpawnable, spawner.position, spawner.rotation);
+            offset = randomSpawnable.GetComponent<TetrisPieces>().verticalOffset;
+            spawned = Instantiate(randomSpawnable, spawner.position + offset, spawner.rotation);
             spawned.GetComponent<TetrisPieces>().moveDirection = Vector3.up;
             break;
     }
