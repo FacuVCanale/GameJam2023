@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: 72cee87ba1052444b90d793aad8061fa
+  productGUID: d23bb530275f3454d906d715444efb8c
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -702,10 +702,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 3a1b8f1a-69f3-440c-a676-972251e4e6c7
+  cloudProjectId: aa6fe6e2-5d5a-40d3-ac1d-3f5cf2021221
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: GameJam2023
+  projectName: GameJam2023 2023-11-03_15-12-55
   organizationId: facundovcanale
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
