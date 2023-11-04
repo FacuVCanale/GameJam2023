@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 5328546389995270978}
   - component: {fileID: 4620190320066163559}
   - component: {fileID: 6446058930141526462}
-  - component: {fileID: 993750069843197561}
   m_Layer: 0
-  m_Name: Shadow
+  m_Name: BasicShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 7764891753515264194}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
-  m_LocalScale: {x: 6, y: 3, z: 2.1667}
+  m_LocalPosition: {x: 0.5, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 2.1667}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -131,16 +130,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &993750069843197561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7764891753515264194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 187b058fed42c86478326f8c3ec6666e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shadowBoxCollider: {fileID: 6446058930141526462}

@@ -13,6 +13,8 @@ public class Shadow : MonoBehaviour
     public BoxCollider2D shadowBoxCollider;
     private Bounds bounds;
 
+    private int errors;
+
     void Start() {
         bounds = GetComponent<BoxCollider2D>().bounds; 
         gridMatrix = new int[Mathf.CeilToInt(bounds.size.x), Mathf.CeilToInt(bounds.size.y)];
@@ -41,11 +43,16 @@ public class Shadow : MonoBehaviour
                 int x = Mathf.FloorToInt((bounds.size.x / 2) + childPos.x);  
                 int y = Mathf.FloorToInt((bounds.size.y / 2) - childPos.y);
 
-                Debug.Log("(" + x + ", " + y + ")");
-                Debug.Log("Bounds: " + bounds.size.x + ", " + bounds.size.y);
-                // Set matrix value
-                gridMatrix[x, y] = 1;
-
+                try {
+                    if (gridMatrix[x, y] == -1) {
+                        errors += 1;
+                    }
+                    // Set matrix value
+                    gridMatrix[x, y] = 1;
+                } catch (IndexOutOfRangeException e) {
+                    errors += 1;
+                    Debug.Log("Index out of range: " + e);
+                }
             }
         }
         
@@ -82,7 +89,7 @@ public class Shadow : MonoBehaviour
         }
     }
 
-    return (float)filledCells / totalCells * 100f;
+    return (float)filledCells / (errors + totalCells) * 100f;
 
     }
 
