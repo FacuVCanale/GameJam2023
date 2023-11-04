@@ -9,7 +9,7 @@ public class CameraScript : MonoBehaviour
     void Update()
     {
             Vector3 position = transform.position;
-            position.x = John.transform.position.x;
+            position.x = John.transform.position.x + 2.25f;
             transform.position = position;
     }
 }

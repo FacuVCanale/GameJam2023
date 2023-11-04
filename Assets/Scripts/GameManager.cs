@@ -44,7 +44,11 @@ public class GameManager : MonoBehaviour
 
     private void UpdateSpeed()
     {
-        float speedDivider = 10f;
+        float speedDivider = 11f;
         scrollSpeed = initialScrollSpeed +  timer / speedDivider;
+        if (scrollSpeed > 8f)
+    	{
+         scrollSpeed = 8f;
+        } 
     }
 }
