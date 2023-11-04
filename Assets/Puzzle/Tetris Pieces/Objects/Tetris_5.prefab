@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1340030471156813751
+--- !u!1 &3069236802592419267
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,25 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6160776339943265686}
-  - component: {fileID: 8487098385779273722}
-  - component: {fileID: 4949595864660549011}
-  - component: {fileID: -8687553239136729978}
-  - component: {fileID: -4115734176540027801}
+  - component: {fileID: 6600916721622619013}
+  - component: {fileID: 7693839140246312129}
+  - component: {fileID: 3724333157390425101}
+  - component: {fileID: 6615237881978735945}
+  - component: {fileID: -8300999996489380044}
   m_Layer: 0
-  m_Name: Tetris_3
-  m_TagString: Player
+  m_Name: Tetris_5
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6160776339943265686
+--- !u!4 &6600916721622619013
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340030471156813751}
+  m_GameObject: {fileID: 3069236802592419267}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -35,13 +35,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8487098385779273722
+--- !u!212 &7693839140246312129
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340030471156813751}
+  m_GameObject: {fileID: 3069236802592419267}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -123518620, guid: fe706ee6bfe90ec439da74e6dd376923, type: 3}
+  m_Sprite: {fileID: -1256574235, guid: b457230b55deabf42bd4f550fca320e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -87,14 +87,14 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &4949595864660549011
+--- !u!50 &3724333157390425101
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340030471156813751}
+  m_GameObject: {fileID: 3069236802592419267}
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -114,13 +114,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &-8687553239136729978
+--- !u!114 &6615237881978735945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340030471156813751}
+  m_GameObject: {fileID: 3069236802592419267}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dafe8fc96bd9fa94b9899d949b93fee2, type: 3}
@@ -128,15 +128,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0, z: 0}
   stepDelay: 0.2
-  verticalOffset: {x: 0.5, y: 0, z: 0}
-  horizontalOffset: {x: 0, y: 0.5, z: 0}
---- !u!61 &-4115734176540027801
+  verticalOffset: {x: 0, y: 0, z: 0}
+  horizontalOffset: {x: 0, y: 0, z: 0}
+--- !u!61 &-8300999996489380044
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340030471156813751}
+  m_GameObject: {fileID: 3069236802592419267}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -165,7 +165,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0, y: 1}
     oldSize: {x: 0.03, y: 0.02}
     newSize: {x: 0.03, y: 0.02}
     adaptiveTilingThreshold: 0.5
