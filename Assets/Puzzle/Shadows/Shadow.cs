@@ -74,6 +74,7 @@ public class Shadow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         piece = other.gameObject;
+        Debug.Log("Piece: " + piece.name);
     }
 
     private void OnTriggerStay2D(Collider2D other) {
