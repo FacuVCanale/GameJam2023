@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
-{
+public class SpawnManager : MonoBehaviour {
   public List<GameObject> spawnables;
 
   public List<Transform> leftWallSpawners;
@@ -13,16 +12,13 @@ public class SpawnManager : MonoBehaviour
 
   private GameObject spawned;
 
-  private void Update()
-  {
-   if(Input.GetKeyDown(KeyCode.Return) )
-   {
+   void Update() {
+   if (Input.GetKeyDown(KeyCode.Return)) {
      SpawnRandom();
    } 
   }
 
-  void SpawnRandom()
-  {
+  public void SpawnRandom() {
    GameObject randomSpawnable = spawnables[Random.Range(0, spawnables.Count)];
 
    int randomIndex = Random.Range(0, 4);
@@ -70,6 +66,6 @@ public class SpawnManager : MonoBehaviour
             spawned.GetComponent<TetrisPieces>().moveDirection = Vector3.up;
             spawned.AddComponent<HorizontalMovement>();
             break;
+        }
     }
- }
 }

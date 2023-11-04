@@ -339,6 +339,34 @@ PrefabInstance:
     m_TransformParent: {fileID: 2037619169}
     m_Modifications:
     - target: {fileID: 813180168067644790, guid: 1ed83f4f5eaf4dd4c93ba477b508cbe8, type: 3}
+      propertyPath: spawnables.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 813180168067644790, guid: 1ed83f4f5eaf4dd4c93ba477b508cbe8, type: 3}
+      propertyPath: spawnables.Array.data[0]
+      value: 
+      objectReference: {fileID: 1403591802825621986, guid: f7e1f24ddc1c46c45abab7e0269a1091, type: 3}
+    - target: {fileID: 813180168067644790, guid: 1ed83f4f5eaf4dd4c93ba477b508cbe8, type: 3}
+      propertyPath: spawnables.Array.data[1]
+      value: 
+      objectReference: {fileID: 917870932042945391, guid: 293e595815ffeb741b309f9ede4c7e36, type: 3}
+    - target: {fileID: 813180168067644790, guid: 1ed83f4f5eaf4dd4c93ba477b508cbe8, type: 3}
+      propertyPath: spawnables.Array.data[2]
+      value: 
+      objectReference: {fileID: 7578704112960025707, guid: 1d44663679c4c574fa5b77b1970533d4, type: 3}
+    - target: {fileID: 813180168067644790, guid: 1ed83f4f5eaf4dd4c93ba477b508cbe8, type: 3}
+      propertyPath: spawnables.Array.data[3]
+      value: 
+      objectReference: {fileID: 9075827817832623707, guid: ac8f2d7428b8e6842aaf654748e2a619, type: 3}
+    - target: {fileID: 813180168067644790, guid: 1ed83f4f5eaf4dd4c93ba477b508cbe8, type: 3}
+      propertyPath: spawnables.Array.data[4]
+      value: 
+      objectReference: {fileID: 5978270848496675716, guid: 4fdad313dcb5cfd46a9e1463361886af, type: 3}
+    - target: {fileID: 813180168067644790, guid: 1ed83f4f5eaf4dd4c93ba477b508cbe8, type: 3}
+      propertyPath: spawnables.Array.data[5]
+      value: 
+      objectReference: {fileID: 7820554444680101730, guid: f8ff489535c695e44a142a7f0ca307c9, type: 3}
+    - target: {fileID: 813180168067644790, guid: 1ed83f4f5eaf4dd4c93ba477b508cbe8, type: 3}
       propertyPath: topWallSpawners.Array.data[0]
       value: 
       objectReference: {fileID: 1961869523}
@@ -1164,7 +1192,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5328546389995270978, guid: c2aed320a0fed52409e3ec4f70e6efd3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5328546389995270978, guid: c2aed320a0fed52409e3ec4f70e6efd3, type: 3}
       propertyPath: m_LocalRotation.w
