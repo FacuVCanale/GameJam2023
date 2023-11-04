@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SpawnManager : MonoBehaviour {
   public List<GameObject> spawnables;
@@ -15,14 +16,27 @@ public class SpawnManager : MonoBehaviour {
 
   private GameObject spawned;
 
+  public int spawnedCount;
+  
+  private int originalAmount;
+
+  public TextMeshProUGUI countText;
+
+    void Start() {
+        originalAmount = spawnedCount;
+        ChangeCountText();
+    }
+
    void Update() {
    if (ready) {
      ready = false;
      SpawnRandom();
+     ChangeCountText();
    } 
   }
 
   public void SpawnRandom() {
+    if (spawnedCount > 0 ) {
    GameObject randomSpawnable = spawnables[Random.Range(0, spawnables.Count)];
 
    int randomIndex = Random.Range(0, 4);
@@ -71,5 +85,12 @@ public class SpawnManager : MonoBehaviour {
             spawned.AddComponent<HorizontalMovement>();
             break;
         }
+    }
+
+    spawnedCount--;
+  }
+
+  public void ChangeCountText() {
+    countText.text = spawnedCount.ToString() + " / " + originalAmount.ToString();
     }
 }
