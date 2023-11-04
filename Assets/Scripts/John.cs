@@ -32,10 +32,24 @@ public class John : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Triggered");
         if (collision.gameObject.CompareTag("Obstacle")) {
             Destroy(collision.gameObject);
-            GameManager.Instance.EraseHype();
+            if (collision.gameObject.name.Contains("Box")) 
+            {
+            GameManager.Instance.EraseHype(0.7f); 
+            }
+            else if (collision.gameObject.name.Contains("Down")) 
+            {
+            GameManager.Instance.EraseHype(0.5f); 
+            }
+            else if (collision.gameObject.name.Contains("Stairs")) 
+            {
+            GameManager.Instance.EraseHype(0.1f); 
+            }
+            else
+            {
+            GameManager.Instance.EraseHype(0.3f); 
+            }
         }
     }
 }

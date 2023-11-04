@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 91682647738395532}
   - component: {fileID: 9179511539255379438}
   - component: {fileID: 2022959298659759516}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: HighChains
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
