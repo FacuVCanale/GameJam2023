@@ -37,18 +37,18 @@ public class GameManager : MonoBehaviour
         return scrollSpeed;
     }
 
-    public void EraseHype()
+    public void EraseHype(float multi)
     {
-        timer = 0f;
+        timer = timer * multi;
     }
 
     private void UpdateSpeed()
     {
-        float speedDivider = 11f;
-        scrollSpeed = initialScrollSpeed +  timer / speedDivider;
-        if (scrollSpeed > 8f)
+        float speedDivider = 8f;
+        scrollSpeed = initialScrollSpeed +  timer / speedDivider; 
+        if (scrollSpeed > 10f)
     	{
-         scrollSpeed = 8f;
+         scrollSpeed = 10f;
         } 
     }
 }
