@@ -30,33 +30,43 @@ public class SpawnManager : MonoBehaviour
 
     Vector3 offset;
 
+    Vector3 spawnPosition;
+
    switch (randomIndex)
     {
         case 0:
             spawner = leftWallSpawners[Random.Range(0, leftWallSpawners.Count)];
             offset = randomSpawnable.GetComponent<TetrisPieces>().horizontalOffset;
-            spawned = Instantiate(randomSpawnable, spawner.position + offset, spawner.rotation);
+            spawnPosition = spawner.position;
+            spawnPosition = new Vector3((int)spawnPosition.x, (int)spawnPosition.y, (int)spawnPosition.z);
+            spawned = Instantiate(randomSpawnable, spawnPosition + offset, spawner.rotation);
             spawned.GetComponent<TetrisPieces>().moveDirection = Vector3.right;
             spawned.AddComponent<VerticalMovement>();
             break;
         case 1:
             spawner = rightWallSpawners[Random.Range(0, rightWallSpawners.Count)];
             offset = randomSpawnable.GetComponent<TetrisPieces>().horizontalOffset;
-            spawned = Instantiate(randomSpawnable, spawner.position + offset, spawner.rotation);
+            spawnPosition = spawner.position;
+            spawnPosition = new Vector3((int)spawnPosition.x, (int)spawnPosition.y, (int)spawnPosition.z);
+            spawned = Instantiate(randomSpawnable, spawnPosition + offset, spawner.rotation);
             spawned.GetComponent<TetrisPieces>().moveDirection = Vector3.left;
             spawned.AddComponent<VerticalMovement>();
             break;
         case 2:
             spawner = topWallSpawners[Random.Range(0, topWallSpawners.Count)];
             offset = randomSpawnable.GetComponent<TetrisPieces>().verticalOffset;
-            spawned = Instantiate(randomSpawnable, spawner.position + offset, spawner.rotation);
+            spawnPosition = spawner.position;
+            spawnPosition = new Vector3((int)spawnPosition.x, (int)spawnPosition.y, (int)spawnPosition.z);
+            spawned = Instantiate(randomSpawnable, spawnPosition + offset, spawner.rotation);
             spawned.GetComponent<TetrisPieces>().moveDirection = Vector3.down;
             spawned.AddComponent<HorizontalMovement>();
             break;
         case 3:
             spawner = bottomWallSpawners[Random.Range(0, bottomWallSpawners.Count)];
             offset = randomSpawnable.GetComponent<TetrisPieces>().verticalOffset;
-            spawned = Instantiate(randomSpawnable, spawner.position + offset, spawner.rotation);
+            spawnPosition = spawner.position;
+            spawnPosition = new Vector3((int)spawnPosition.x, (int)spawnPosition.y, (int)spawnPosition.z);
+            spawned = Instantiate(randomSpawnable, spawnPosition + offset, spawner.rotation);
             spawned.GetComponent<TetrisPieces>().moveDirection = Vector3.up;
             spawned.AddComponent<HorizontalMovement>();
             break;

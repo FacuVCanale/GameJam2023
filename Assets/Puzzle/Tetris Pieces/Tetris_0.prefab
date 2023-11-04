@@ -48,9 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0, z: 0}
-  stepDelay: 0.8
+  stepDelay: 0.2
   verticalOffset: {x: 0.5, y: 0.5, z: 0}
-  horizontalOffset: {x: 0, y: 0, z: 0}
+  horizontalOffset: {x: 0.5, y: 0.5, z: 0}
 --- !u!212 &3336488226862181472
 SpriteRenderer:
   m_ObjectHideFlags: 0
