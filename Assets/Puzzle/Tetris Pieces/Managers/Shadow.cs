@@ -9,6 +9,9 @@ public class Shadow : MonoBehaviour
 
     
     private GameObject piece;
+    public GameObject spawnManager;
+
+    public GameObject greatWork;
     
     public BoxCollider2D shadowBoxCollider;
     private Bounds bounds;
@@ -21,6 +24,7 @@ public class Shadow : MonoBehaviour
     void Update() {
         if (Input.GetKeyDown(KeyCode.Return) && piece != null) {
             piece.GetComponent<TetrisPieces>().moveDirection = Vector3.zero;
+
             HorizontalMovement componentToRemove = piece.GetComponent<HorizontalMovement>();
             if (componentToRemove != null) {
                 Destroy(componentToRemove);
@@ -45,7 +49,13 @@ public class Shadow : MonoBehaviour
                 Debug.Log("Bounds: " + bounds.size.x + ", " + bounds.size.y);
                 // Set matrix value
                 gridMatrix[x, y] = 1;
-
+                
+            }
+            if(IsMatrixFull()){
+                greatWork.SetActive(true);
+            }
+            else{
+                spawnManager.GetComponent<SpawnManager>().ready = true;
             }
         }
         
@@ -93,7 +103,6 @@ public class Shadow : MonoBehaviour
             return false;
             }
         }
-
         return true;
 
     }

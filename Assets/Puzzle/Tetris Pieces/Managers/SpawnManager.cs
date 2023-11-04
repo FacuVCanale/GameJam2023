@@ -10,10 +10,14 @@ public class SpawnManager : MonoBehaviour {
   public List<Transform> topWallSpawners;
   public List<Transform> bottomWallSpawners;
 
+
+  public bool ready = true;
+
   private GameObject spawned;
 
    void Update() {
-   if (Input.GetKeyDown(KeyCode.Return)) {
+   if (ready) {
+     ready = false;
      SpawnRandom();
    } 
   }
