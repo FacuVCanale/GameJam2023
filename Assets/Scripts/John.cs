@@ -31,17 +31,11 @@ public class John : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawWireSphere(groundCheck.position, radius);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.CompareTag("Obstacle"))
-        {
-            GameManager.Instance.EraseHype();
+    void OnTriggerEnter2D(Collider2D collision) {
+        Debug.Log("Triggered");
+        if (collision.gameObject.CompareTag("Obstacle")) {
             Destroy(collision.gameObject);
+            GameManager.Instance.EraseHype();
         }
     }
 }
