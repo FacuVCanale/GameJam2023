@@ -71,6 +71,5 @@ public class SpawnManager : MonoBehaviour
             spawned.AddComponent<HorizontalMovement>();
             break;
     }
-
  }
 }

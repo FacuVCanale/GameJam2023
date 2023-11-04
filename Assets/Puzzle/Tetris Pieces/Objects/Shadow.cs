@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -37,4 +38,11 @@ public class Shadow : MonoBehaviour
         Debug.Log("Shadow stopped colliding with " + other.gameObject.name);
     }
 
+    public bool IsFull() {
+        if (shadowBoxCollider.IsTouchingLayers(LayerMask.GetMask("TetrisPiece"))) {
+            Debug.Log("Shadow is full");
+            return true;
+        }
+        return false;
+    }
 }

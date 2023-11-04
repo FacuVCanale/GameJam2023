@@ -14,5 +14,8 @@ public class VerticalMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.DownArrow)) {
             transform.position += new Vector3(0, -1, 0);
         }
+        if(Input.GetKeyDown(KeyCode.Space)){
+            transform.RotateAround(transform.position, Vector3.forward, 90);
+        }
     }
 }

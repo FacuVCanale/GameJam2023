@@ -13,6 +13,9 @@ public class HorizontalMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow)) {
             transform.position += new Vector3(1, 0, 0);
         }
+        if(Input.GetKeyDown(KeyCode.Space)){
+            transform.RotateAround(transform.position, Vector3.forward, 90);
+        }
         
     }
 }
