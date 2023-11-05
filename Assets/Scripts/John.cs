@@ -39,19 +39,19 @@ public class John : MonoBehaviour
             
             if (collision.gameObject.name.Contains("Box")) 
             {
-                GameManager.Instance.EraseHype(0.7f); 
+                GameManager.Instance.EraseHype(0.5f); 
             }
             else if (collision.gameObject.name.Contains("Pipes"))
             {
-            GameManager.Instance.EraseHype(0.5f);
+            GameManager.Instance.EraseHype(0.3f);
             }
             else if (collision.gameObject.name.Contains("Pipe")) 
             {
-            GameManager.Instance.EraseHype(0.3f);
+            GameManager.Instance.EraseHype(0.1f);
             }
             else if (collision.gameObject.name.Contains("Stairs")) 
             {
-            GameManager.Instance.EraseHype(0.1f);
+            GameManager.Instance.EraseHype(0.05f);
             }
             collision.gameObject.GetComponent<Animator>().SetBool("Died", true);
             RemoveBoxCollider(collision.gameObject);

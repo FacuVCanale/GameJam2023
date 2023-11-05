@@ -252,7 +252,6 @@ MonoBehaviour:
   - {fileID: 560003868745092083, guid: 5c176681a99cf9c468e3bc6692feb185, type: 3}
   - {fileID: 560003868745092083, guid: 18c5a5cba6238244394e9e7ca83fa9c3, type: 3}
   - {fileID: 560003868745092083, guid: a5a02cfdf6015484bbf033d3bab336ac, type: 3}
-  - {fileID: 560003868745092083, guid: c5a09b1045f4a2f419d9ac40b000409f, type: 3}
   - {fileID: 560003868745092083, guid: 4f2cf983496836e4288f4e0a70d08630, type: 3}
   minTime: 1.4
   maxTime: 2

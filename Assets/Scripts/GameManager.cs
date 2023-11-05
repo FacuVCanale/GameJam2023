@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         seconds_passed = 0f;
         timer = 0f;
         timer_for_score = 0f;
-        timeForRunning = 100000000f;
+        timeForRunning = 111f;
         meters = 0f;
 
         // Configura la velocidad inicial
@@ -63,12 +63,14 @@ public class GameManager : MonoBehaviour
             UpdateTime();
             UpdateScore();
             UpdateBombTimer();
+            
             // Llamada al método para sumar los segundos
             //Debug.Log(seconds_passed);
 
             // Verifica si el tiempo ha transcurrido y no se ha alcanzado la cantidad de metros necesaria
-            if (timeForRunning<=0 && meters < 50)
+            if (timeForRunning<=0 && meters < 1000)
             {
+                Debug.Log(meters);
                 // El juego termina y se pierde
                 EndGame();
             }
@@ -107,8 +109,8 @@ public class GameManager : MonoBehaviour
     {
         float scorePerSeconds = 3 + (scrollSpeed / 2f);
 
-        timer_for_score += Time.deltaTime;
-        meters = (int)(timer_for_score * scorePerSeconds);
+        timer_for_score += Time.deltaTime * scorePerSeconds;
+        meters = (int)(timer_for_score);
         scoreText.text = string.Format("Meters: {0:00000}", meters);
     }
 
