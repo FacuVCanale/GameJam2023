@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         seconds_passed = 0f;
         timer = 0f;
         timer_for_score = 0f;
-        timeForRunning = 10f;
+        timeForRunning = 100000000f;
         meters = 0f;
 
         // Configura la velocidad inicial
@@ -64,8 +64,8 @@ public class GameManager : MonoBehaviour
             UpdateScore();
             UpdateBombTimer();
             // Llamada al método para sumar los segundos
-            Debug.Log(seconds_passed);
-            
+            //Debug.Log(seconds_passed);
+
             // Verifica si el tiempo ha transcurrido y no se ha alcanzado la cantidad de metros necesaria
             if (timeForRunning<=0 && meters < 50)
             {
