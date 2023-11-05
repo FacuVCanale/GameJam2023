@@ -41,8 +41,6 @@ public class Shadow : MonoBehaviour
 
             // Loop through each child
             foreach(Transform child in piece.transform) {
-                Debug.Log("Child: " + child.name);
-
                 // Get child position
                 Vector3 childPos = child.position;
 
@@ -58,7 +56,6 @@ public class Shadow : MonoBehaviour
                     gridMatrix[x, y] = 1;
                 } catch (IndexOutOfRangeException e) {
                     errors += 1;
-                    Debug.Log("Index out of range: " + e);
                 }
             }
             if(IsMatrixFull()){
@@ -82,7 +79,6 @@ public class Shadow : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         piece = other.gameObject;
-        Debug.Log("Piece: " + piece.name);
     }
 
     private void OnTriggerStay2D(Collider2D other) {

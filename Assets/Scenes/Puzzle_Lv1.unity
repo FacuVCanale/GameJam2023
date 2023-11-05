@@ -575,7 +575,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2155751592970395104, guid: bd86ce9e450f51a45ab97dd8ac87f0ce, type: 3}
       propertyPath: m_LocalScale.x
-      value: 499.99997
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 2155751592970395104, guid: bd86ce9e450f51a45ab97dd8ac87f0ce, type: 3}
       propertyPath: m_LocalScale.y
@@ -583,7 +583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2155751592970395104, guid: bd86ce9e450f51a45ab97dd8ac87f0ce, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 350
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 2155751592970395104, guid: bd86ce9e450f51a45ab97dd8ac87f0ce, type: 3}
       propertyPath: m_LocalPosition.y
@@ -625,6 +625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Right Elimination Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 4684245134240385664, guid: bd86ce9e450f51a45ab97dd8ac87f0ce, type: 3}
+      propertyPath: SpawnManager
+      value: 
+      objectReference: {fileID: 140653035}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1128,6 +1132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom Elimination Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5812647214620829543, guid: 65bec37ef94160e4e88bf12cb6732807, type: 3}
+      propertyPath: SpawnManager
+      value: 
+      objectReference: {fileID: 140653035}
     - target: {fileID: 6794650891064917604, guid: 65bec37ef94160e4e88bf12cb6732807, type: 3}
       propertyPath: m_LocalScale.x
       value: 800
@@ -1142,7 +1150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6794650891064917604, guid: 65bec37ef94160e4e88bf12cb6732807, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -250
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 6794650891064917604, guid: 65bec37ef94160e4e88bf12cb6732807, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3731,7 +3739,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1274658621947654340, guid: cb0161e4077cf1542aff5d8ce16a054d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 499.99997
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 1274658621947654340, guid: cb0161e4077cf1542aff5d8ce16a054d, type: 3}
       propertyPath: m_LocalScale.y
@@ -3739,7 +3747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1274658621947654340, guid: cb0161e4077cf1542aff5d8ce16a054d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -350
+      value: -400
       objectReference: {fileID: 0}
     - target: {fileID: 1274658621947654340, guid: cb0161e4077cf1542aff5d8ce16a054d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3781,6 +3789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftEliminationWall
       objectReference: {fileID: 0}
+    - target: {fileID: 5922949987501340621, guid: cb0161e4077cf1542aff5d8ce16a054d, type: 3}
+      propertyPath: SpawnManager
+      value: 
+      objectReference: {fileID: 140653035}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4077,6 +4089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Top Elimination Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 1779403899492467479, guid: daa8df912a7481c47bb3f617b4e87660, type: 3}
+      propertyPath: SpawnManager
+      value: 
+      objectReference: {fileID: 140653035}
     - target: {fileID: 3271028611065603076, guid: daa8df912a7481c47bb3f617b4e87660, type: 3}
       propertyPath: m_LocalScale.x
       value: 800
@@ -4091,7 +4107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3271028611065603076, guid: daa8df912a7481c47bb3f617b4e87660, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 250
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3271028611065603076, guid: daa8df912a7481c47bb3f617b4e87660, type: 3}
       propertyPath: m_LocalPosition.z
