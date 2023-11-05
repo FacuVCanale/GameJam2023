@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5215626246487295259}
   - component: {fileID: 5737198917146397163}
   - component: {fileID: 9179511539255379438}
-  - component: {fileID: 2022959298659759516}
+  - component: {fileID: 1292943458278425058}
   m_Layer: 0
   m_Name: HighChains
   m_TagString: Obstacle
@@ -114,7 +114,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &5737198917146397163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,10 +156,10 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0090972185, y: -0.2936315}
+  m_Offset: {x: 0.07886782, y: -0.30913213}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -170,9 +170,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3728325, y: 0.5809382}
+  m_Size: {x: 0.99775165, y: 0.49156302}
   m_EdgeRadius: 0
---- !u!68 &2022959298659759516
+--- !u!68 &1292943458278425058
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,11 +204,11 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.6}
+  m_Offset: {x: 0, y: -0.57}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -1.7599999, y: 0}
-  - {x: 1.7599999, y: 0}
+  - {x: -0.57, y: 0}
+  - {x: 0.57, y: 0}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0

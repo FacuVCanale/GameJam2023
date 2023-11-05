@@ -5100,6 +5100,7 @@ MonoBehaviour:
   message1: {fileID: 1046454213}
   message2: {fileID: 1334381686}
   message3: {fileID: 1183496231}
+  ScoreManager: {fileID: 0}
 --- !u!1001 &3288892412263666757
 PrefabInstance:
   m_ObjectHideFlags: 0
