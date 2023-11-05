@@ -97,4 +97,11 @@ public class SpawnManager : MonoBehaviour {
   public void ChangeCountText() {
     countText.text = spawnedCount.ToString() + " / " + originalAmount.ToString();
     }
+
+    public void ResetSpawnManager() {
+        spawnedCount = originalAmount;
+        ChangeCountText();
+        greatWork.SetActive(false);
+        ready = true;
+    }
 }

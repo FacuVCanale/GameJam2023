@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveDirection: {x: 0, y: 0, z: 0}
-  stepDelay: 0.5
+  stepDelay: 0.3
   verticalOffset: {x: 0, y: 0, z: 0}
   horizontalOffset: {x: 0, y: 0, z: 0}
 --- !u!61 &3062015639142833268

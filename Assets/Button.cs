@@ -4,35 +4,43 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    public GameObject shadows;
+    public GameObject[] shadows;
+
+    public GameObject OverlayGreatWork;
     
-    private int shadowIndex = 0;
-    private List<GameObject> shadowList;
+    private int shadowIndex = 1;
 
 
     void Start() {
         // Get an array of all the child GameObjects
-        Transform[] shadowsChildren = shadows.GetComponentsInChildren<Transform>();
-        foreach (Transform shadow in shadowsChildren) {
-            shadowList.Add(shadow.gameObject);
-        }
     }
 
     public void OnButtonPress() {
-        GameObject TetrisToDelete = GameObject.FindWithTag("TetrisPiece");
-        while (TetrisToDelete != null) {
-            Destroy(TetrisToDelete);
-            TetrisToDelete = GameObject.FindWithTag("TetrisPiece");
+        // Get an array of all the game objects with the tag "TetrisPiece"
+        GameObject[] tetrisPieces = GameObject.FindGameObjectsWithTag("TetrisPiece");
+
+        // Loop through the array and destroy each game object
+        foreach (GameObject tetrisPiece in tetrisPieces) {
+            Destroy(tetrisPiece);
         }
 
-        if (shadowIndex >= shadowList.Count) {
+        for (int i = 0; i < shadows.Length; i++) {
+            Debug.Log(shadows[i].name);
+        }
+
+
+        if (shadowIndex > 0) {
+            shadows[shadowIndex-1].SetActive(false);
+        }
+
+        if (shadowIndex >= shadows.Length) {
+            //Pasar a la escena runner
             shadowIndex = 0;
         }
-        if (shadowIndex > 0) {
-            shadowList[shadowIndex-1].SetActive(false);
-        }
-        shadowList[shadowIndex].SetActive(true);
+        shadows[shadowIndex].SetActive(true);
         shadowIndex += 1;
+
+        GameObject.Find("SpawnManager").GetComponent<SpawnManager>().ResetSpawnManager();
     }
     
 }

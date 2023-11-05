@@ -1933,6 +1933,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57b36ba0947b41f42a2a7948d70a930a, type: 3}
+--- !u!1 &1062881978 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 39199315971836188, guid: 42a3b78340f067e4487d7b9c6d216b0e, type: 3}
+  m_PrefabInstance: {fileID: 1163287632}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1066877015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 72167233609135348, guid: 181b093398d4d4c49bcf731c4caf9fa7, type: 3}
@@ -2612,7 +2617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1315836042
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2697,6 +2702,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1316295607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3976508803377820595, guid: 57b36ba0947b41f42a2a7948d70a930a, type: 3}
+  m_PrefabInstance: {fileID: 1017081696}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1322588184 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7385888617913686832, guid: 14c5ee1d9333f7848b490b1f359a6119, type: 3}
@@ -3064,6 +3074,11 @@ Transform:
   - {fileID: 1961869523}
   m_Father: {fileID: 1838895595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1518830110 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3372682042073091013, guid: 181b093398d4d4c49bcf731c4caf9fa7, type: 3}
+  m_PrefabInstance: {fileID: 37042827}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1523517593 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2849203157515958260, guid: e8a985ce1b343604790d53bf96bbfb64, type: 3}
@@ -3597,6 +3612,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 791dc524f4f26da42b47d49baf54209c, type: 3}
+--- !u!1 &1731459893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4375223716466657222, guid: 9e976ce2d8182d94c96dd063d918d92f, type: 3}
+  m_PrefabInstance: {fileID: 1134046495}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1733540070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1274658621947654340, guid: cb0161e4077cf1542aff5d8ce16a054d, type: 3}
@@ -4385,7 +4405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1854642295664811502, guid: f80f304703ae8a34a9c286938740f3c9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4896121513667661651, guid: f80f304703ae8a34a9c286938740f3c9, type: 3}
       propertyPath: m_Pivot.x
@@ -4481,7 +4501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6502702828665627951, guid: f80f304703ae8a34a9c286938740f3c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Continue
+      value: OnButtonPress
       objectReference: {fileID: 0}
     - target: {fileID: 6502702828665627951, guid: f80f304703ae8a34a9c286938740f3c9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4536,9 +4556,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07af7dad293aee640a94c1772a5ed743, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shadow: {fileID: 1667686688}
-  progress: {fileID: 1886922882}
-  Message: {fileID: 1389482732}
+  shadows:
+  - {fileID: 1062881978}
+  - {fileID: 1316295607}
+  - {fileID: 1731459893}
+  - {fileID: 1518830110}
+  OverlayGreatWork: {fileID: 1315836041}
 --- !u!224 &2684928602678190794 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5640665556141327194, guid: 551911416f682b6489fa5d61b260cdab, type: 3}
