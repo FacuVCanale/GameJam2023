@@ -7,8 +7,8 @@ public class ChipShadowArray : MonoBehaviour
 
     public int[,] gridMatrix;
     // Start is called before the first frame update
-    void Start()
-    {
+
+    public int[,] GetGridMatrix() {
         gridMatrix = new int[8,8];
         for (int i = 0; i < 8; i++) {
             if (i != 2 && i != 5) {
@@ -18,9 +18,6 @@ public class ChipShadowArray : MonoBehaviour
                 gridMatrix[7, i] = -1;
             }
         }
-    }
-
-    public int[,] GetGridMatrix() {
         return gridMatrix;
     }
 }

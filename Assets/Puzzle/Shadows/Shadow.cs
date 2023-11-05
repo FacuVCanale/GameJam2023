@@ -26,7 +26,9 @@ public class Shadow : MonoBehaviour
     private int errorsInBoundingBox = 0;
     int messageIndex = 3;
 
-    void Start() {
+    private int totalCells;
+
+    void OnEnable() {
         bounds = GetComponent<BoxCollider2D>().bounds;
         Debug.Log("Grid Matrix size is " + bounds.size.x + " x " + bounds.size.y);
         ContainerShadowArray  ContainerArray = this.GetComponent<ContainerShadowArray>();
@@ -55,9 +57,20 @@ public class Shadow : MonoBehaviour
             }
             
         }
+
+        Debug.Log("Complete Grid Matrix: " + gridMatrix[0,0]);
         
+        totalCells = gridMatrix.GetLength(0) * gridMatrix.GetLength(1);
+        for (int i = 0; i < gridMatrix.GetLength(0); i++) {
+            for (int j = 0; j < gridMatrix.GetLength(1); j++) {
+        
+                if (gridMatrix[i,j] == -1) {
+                    totalCells--; 
+                }
+            }
+        }
     }
-    }
+    
 
     void Update() {
         if (Input.GetKeyDown(KeyCode.Return) && piece != null) {
@@ -109,22 +122,27 @@ public class Shadow : MonoBehaviour
                 else if(messageIndex == 3){
                     message3.SetActive(true);
                 }
+
             }
             else{
                 spawnManager.GetComponent<SpawnManager>().ready = true;
             }
+            ProgressText.text = "Progress:\n\n" + GetMatrixFillPercentage() + "%";
+            ProgressBarAdjuster.transform.localScale = new Vector3(GetMatrixFillPercentage() / 100f, 1f, 1f);
+            //ErrorText.text = "Errors:\n" + errors;
+            piece = null;
         }
         
         if (Input.GetKeyDown(KeyCode.T)) {
             Debug.Log("Matrix percentage: " + GetMatrixFillPercentage());
             Debug.Log("Matrix full: " + IsMatrixFull());
+            Debug.Log("Errors in bounding box: " + errorsInBoundingBox);
+            Debug.Log("Errors outside bounding box: " + errorsOutsideBoundingBox);
         }
 
-        //ErrorText.text = "Errors:\n" + errors;
+        
 
-        ProgressText.text = "Progress:\n\n" + GetMatrixFillPercentage() + "%";
-        ProgressBarAdjuster.transform.localScale = new Vector3(GetMatrixFillPercentage() / 100f, 1f, 1f);
-    }
+        }
 
     void OnTriggerEnter2D(Collider2D other) {
         piece = other.gameObject;
@@ -135,8 +153,6 @@ public class Shadow : MonoBehaviour
     }
 
     float GetMatrixFillPercentage() {
-
-        int totalCells = gridMatrix.GetLength(0) * gridMatrix.GetLength(1);
         int filledCells = 0;
 
         for (int i = 0; i < gridMatrix.GetLength(0); i++) {
@@ -145,8 +161,7 @@ public class Shadow : MonoBehaviour
             if (gridMatrix[i,j] == 1) {
                 filledCells++; 
             }
-        
-            }
+        }
         }
 
         return Mathf.RoundToInt((float)filledCells / totalCells * 100f);
@@ -155,10 +170,13 @@ public class Shadow : MonoBehaviour
 
     bool IsMatrixFull() {
         
-        foreach(int value in gridMatrix) {
-            if(value != 1) {
-            return false;
+        for (int i = 0; i < gridMatrix.GetLength(0); i++) {
+            for (int j = 0; j < gridMatrix.GetLength(1); j++) {
+        
+            if (gridMatrix[i,j] == 0) {
+                return false; 
             }
+        }
         }
         return true;
 
