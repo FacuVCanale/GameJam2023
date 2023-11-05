@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int score = 0;
+    private static int score;
     
-    public void SumLevelScore(int levelScore) {
+    public static void ResetScore() {
+        score = 0;
+    }
+
+    public static void SumLevelScore(int levelScore) {
         score += levelScore;
     }
 
-    public void AverageScore(int levels) {
+    public static void AverageScore(int levels) {
         score = score / levels;
     }
 
-    public int GetScore() {
+    public static int GetScore() {
         return score;
         Debug.Log("Score: " + score);
     }
