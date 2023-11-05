@@ -29,24 +29,24 @@ public class Shadow : MonoBehaviour
     void Start() {
         bounds = GetComponent<BoxCollider2D>().bounds;
         Debug.Log("Grid Matrix size is " + bounds.size.x + " x " + bounds.size.y);
-        int[,] ContainerArray = this.GetComponent<ContainerShadowArray>().GetGridMatrix();
+        ContainerShadowArray  ContainerArray = this.GetComponent<ContainerShadowArray>();
         if (ContainerArray != null) {
-            gridMatrix = ContainerArray;
+            gridMatrix = ContainerArray.GetGridMatrix();
         }
         else {
-            int[,] ChipArray = this.GetComponent<ChipShadowArray>().GetGridMatrix();
+            ChipShadowArray ChipArray = this.GetComponent<ChipShadowArray>();
             if (ChipArray != null) {
-                gridMatrix = ChipArray;
+                gridMatrix = ChipArray.GetGridMatrix();
             }
             else {
-                int[,] OxygenArray = this.GetComponent<OxygenShadowArray>().GetGridMatrix();
+                OxygenShadowArray OxygenArray = this.GetComponent<OxygenShadowArray>();
                 if (OxygenArray != null) {
-                    gridMatrix = OxygenArray;
+                    gridMatrix = OxygenArray.GetGridMatrix();
                 }
                 else {
-                    int[,] TimerArray = this.GetComponent<TimerShadowArray>().GetGridMatrix();
+                    TimerShadowArray TimerArray = this.GetComponent<TimerShadowArray>();
                     if (TimerArray != null) {
-                        gridMatrix = TimerArray;
+                        gridMatrix = TimerArray.GetGridMatrix();
                     }
                     else {
                         Debug.Log("No shadow array found");
@@ -55,6 +55,7 @@ public class Shadow : MonoBehaviour
             
         }
         
+    }
     }
 
     void Update() {
@@ -132,22 +133,22 @@ public class Shadow : MonoBehaviour
         piece = null;
     }
 
-    public float GetMatrixFillPercentage() {
+    float GetMatrixFillPercentage() {
 
-    int totalCells = gridMatrix.GetLength(0) * gridMatrix.GetLength(1);
-    int filledCells = 0;
+        int totalCells = gridMatrix.GetLength(0) * gridMatrix.GetLength(1);
+        int filledCells = 0;
 
-    for (int i = 0; i < gridMatrix.GetLength(0); i++) {
-        for (int j = 0; j < gridMatrix.GetLength(1); j++) {
+        for (int i = 0; i < gridMatrix.GetLength(0); i++) {
+            for (int j = 0; j < gridMatrix.GetLength(1); j++) {
         
-        if (gridMatrix[i,j] == 1) {
-            filledCells++; 
-        }
+            if (gridMatrix[i,j] == 1) {
+                filledCells++; 
+            }
         
+            }
         }
-    }
 
-    return Mathf.RoundToInt((float)filledCells / totalCells * 100f);
+        return Mathf.RoundToInt((float)filledCells / totalCells * 100f);
 
     }
 
@@ -162,4 +163,4 @@ public class Shadow : MonoBehaviour
 
     }
 }
-}
+
