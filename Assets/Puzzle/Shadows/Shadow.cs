@@ -51,6 +51,7 @@ public class Shadow : MonoBehaviour
                     else {
                         Debug.Log("No shadow array found");
                     }
+                }
             }
             
         }
