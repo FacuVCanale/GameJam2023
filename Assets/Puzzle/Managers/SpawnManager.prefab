@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6326641011739242546
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3425633935923980593}
+  - component: {fileID: 813180168067644790}
+  m_Layer: 0
+  m_Name: SpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3425633935923980593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6326641011739242546}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.464595, y: 4.7635994, z: -4.672884}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &813180168067644790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6326641011739242546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb83566aeb377947ba30070bbf8e93a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnables:
+  - {fileID: 1283231420665104299, guid: 72e24da995af9964e829f61ae2de218d, type: 3}
+  - {fileID: 6876085419317382895, guid: 2db21b9deca5d6c49bf47e7252f261df, type: 3}
+  - {fileID: 3736658644445562736, guid: 49eded579238b7f48a073368656ba02a, type: 3}
+  - {fileID: 1340030471156813751, guid: 0712c4085c8db154a8a3f26c3e1b494d, type: 3}
+  - {fileID: 3932076682549829804, guid: e933826a302a2f24185121a0888db128, type: 3}
+  - {fileID: 3069236802592419267, guid: a1f7b745e1dd4d74191973a3970775d2, type: 3}
+  leftWallSpawners:
+  - {fileID: 0}
+  rightWallSpawners:
+  - {fileID: 0}
+  topWallSpawners:
+  - {fileID: 0}
+  bottomWallSpawners:
+  - {fileID: 0}
