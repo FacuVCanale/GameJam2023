@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text bombTimerText;
 
 
-    private float timeForRunning = 10f;
+    private float timeForRunning = 111f;
 
     private bool isGameOver = false; // Indica si el juego ha terminado
 

@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndMenu/EndScene.unity
     guid: 9c8685c98611ce74c90b4fde63a2f140
+  - enabled: 1
+    path: Assets/Scenes/Menus/WinScene.unity
+    guid: e2635b9881d828b478260249ce100f07
   m_configObjects: {}
