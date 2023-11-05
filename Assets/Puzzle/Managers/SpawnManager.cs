@@ -4,12 +4,20 @@ using UnityEngine;
 using TMPro;
 
 public class SpawnManager : MonoBehaviour {
+
   public List<GameObject> spawnables;
 
   public List<Transform> leftWallSpawners;
   public List<Transform> rightWallSpawners;
   public List<Transform> topWallSpawners;
   public List<Transform> bottomWallSpawners;
+
+public GameObject progressBarAdjuster;
+
+public GameObject message1;
+public GameObject message2;
+public GameObject message3;
+private int messageIndex = 3;
 
 
   public bool ready = true;
@@ -91,6 +99,21 @@ public class SpawnManager : MonoBehaviour {
     }
     else {
         greatWork.SetActive(true);
+        if(progressBarAdjuster.transform.localScale.x > 0.75f){
+            messageIndex = 1;
+        }
+        else if(progressBarAdjuster.transform.localScale.x > 0.30f){
+            messageIndex = 2;
+        }
+        if(messageIndex == 1){
+                    message1.SetActive(true);
+                }
+                else if(messageIndex == 2){
+                    message2.SetActive(true);
+                }
+                else if(messageIndex == 3){
+                    message3.SetActive(true);
+                }
     }    
   }
 

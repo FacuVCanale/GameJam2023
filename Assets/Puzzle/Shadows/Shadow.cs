@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor.VersionControl;
 
 public class Shadow : MonoBehaviour
 {
     public int[,] gridMatrix;
 
-    
     private GameObject piece;
     public GameObject spawnManager;
 
@@ -17,7 +17,12 @@ public class Shadow : MonoBehaviour
     public GameObject ProgressBarAdjuster;
     
     public BoxCollider2D shadowBoxCollider;
+    public GameObject message1;
+    public GameObject message2;
+    public GameObject message3;
     private Bounds bounds;
+
+    int messageIndex = 3;
 
     private int errors;
 
@@ -29,6 +34,13 @@ public class Shadow : MonoBehaviour
     void Update() {
         if (Input.GetKeyDown(KeyCode.Return) && piece != null) {
             piece.GetComponent<TetrisPieces>().moveDirection = Vector3.zero;
+
+            if (GetMatrixFillPercentage() >= 75) {
+                messageIndex = 1;
+            }
+            else if (GetMatrixFillPercentage() >= 30 ) {
+                messageIndex = 2;
+            }
 
             HorizontalMovement componentToRemove = piece.GetComponent<HorizontalMovement>();
             if (componentToRemove != null) {
@@ -60,6 +72,15 @@ public class Shadow : MonoBehaviour
             }
             if(IsMatrixFull()){
                 greatWork.SetActive(true);
+                if(messageIndex == 1){
+                    message1.SetActive(true);
+                }
+                else if(messageIndex == 2){
+                    message2.SetActive(true);
+                }
+                else if(messageIndex == 3){
+                    message3.SetActive(true);
+                }
             }
             else{
                 spawnManager.GetComponent<SpawnManager>().ready = true;
@@ -89,7 +110,7 @@ public class Shadow : MonoBehaviour
         piece = null;
     }
 
-    float GetMatrixFillPercentage() {
+    public float GetMatrixFillPercentage() {
 
     int totalCells = gridMatrix.GetLength(0) * gridMatrix.GetLength(1);
     int filledCells = 0;
