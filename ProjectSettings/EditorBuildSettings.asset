@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Puzzle_Lv1.unity
-    guid: 2e5207a8eda3629499d72c1f616d9c95
-  - enabled: 1
-    path: Assets/Scenes/TransitionToRunner.unity
-    guid: 44a316ef14d5a3b438416ea0b01a9077
-  - enabled: 1
     path: Assets/Scenes/Menus/Menu.unity
     guid: 62e890b0ed0aa024fbe22528ab7b23d2
   - enabled: 1
+    path: Assets/Scenes/Puzzle_Lv1.unity
+    guid: 2e5207a8eda3629499d72c1f616d9c95
+  - enabled: 1
     path: Assets/Scenes/Dia1.unity
     guid: 7965f4fa1bf9b0541b1cc416a5499d1f
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/EndMenu/EndScene.unity
     guid: 9c8685c98611ce74c90b4fde63a2f140
+  - enabled: 0
+    path: Assets/Scenes/TransitionToRunner.unity
+    guid: 44a316ef14d5a3b438416ea0b01a9077
+  - enabled: 0
+    path: Assets/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
