@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6950363989736309557}
+  - component: {fileID: -6588570931257245830}
   - component: {fileID: 2390788460822353749}
   m_Layer: 0
   m_Name: ChipShadow
@@ -41,6 +42,22 @@ Transform:
   - {fileID: 8851627737923284733}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-6588570931257245830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3976508803377820595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187b058fed42c86478326f8c3ec6666e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnManager: {fileID: 0}
+  greatWork: {fileID: 0}
+  ProgressText: {fileID: 0}
+  shadowBoxCollider: {fileID: 2390788460822353749}
 --- !u!61 &2390788460822353749
 BoxCollider2D:
   m_ObjectHideFlags: 0

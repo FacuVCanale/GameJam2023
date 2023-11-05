@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Shadow : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Shadow : MonoBehaviour
     public GameObject spawnManager;
 
     public GameObject greatWork;
+    public TextMeshProUGUI ProgressText;
+    public GameObject ProgressBarAdjuster;
     
     public BoxCollider2D shadowBoxCollider;
     private Bounds bounds;
@@ -70,6 +73,11 @@ public class Shadow : MonoBehaviour
             Debug.Log("Matrix percentage: " + GetMatrixFillPercentage());
             Debug.Log("Matrix full: " + IsMatrixFull());
         }
+
+        //ErrorText.text = "Errors:\n" + errors;
+
+        ProgressText.text = "Progress:\n\n" + GetMatrixFillPercentage() + "%";
+        ProgressBarAdjuster.transform.localScale = new Vector3(GetMatrixFillPercentage() / 100f, 1f, 1f);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
@@ -100,7 +108,7 @@ public class Shadow : MonoBehaviour
         }
     }
 
-    return (float)filledCells / (errors + totalCells) * 100f;
+    return Mathf.RoundToInt((float)filledCells / totalCells * 100f);
 
     }
 

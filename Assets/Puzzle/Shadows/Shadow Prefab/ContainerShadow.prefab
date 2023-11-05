@@ -65,6 +65,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7764891753515264194, guid: c2aed320a0fed52409e3ec4f70e6efd3, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: -2102639553985063194}
+    - targetCorrespondingSourceObject: {fileID: 7764891753515264194, guid: c2aed320a0fed52409e3ec4f70e6efd3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6448885049923754365}
     - targetCorrespondingSourceObject: {fileID: 7764891753515264194, guid: c2aed320a0fed52409e3ec4f70e6efd3, type: 3}
@@ -76,6 +79,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7764891753515264194, guid: c2aed320a0fed52409e3ec4f70e6efd3, type: 3}
   m_PrefabInstance: {fileID: 7730759134237401566}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-2102639553985063194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39199315971836188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187b058fed42c86478326f8c3ec6666e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnManager: {fileID: 0}
+  greatWork: {fileID: 0}
+  ProgressText: {fileID: 0}
+  shadowBoxCollider: {fileID: 0}
 --- !u!114 &6448885049923754365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnManager: {fileID: 0}
   greatWork: {fileID: 0}
+  ProgressText: {fileID: 0}
   shadowBoxCollider: {fileID: 2688027661906165471}
 --- !u!61 &2688027661906165471
 BoxCollider2D:

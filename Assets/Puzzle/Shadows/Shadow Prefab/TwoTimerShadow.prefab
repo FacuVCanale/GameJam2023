@@ -87,6 +87,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 72167233609135348}
+  - component: {fileID: 5417980612749450463}
   - component: {fileID: 6753077095808326639}
   m_Layer: 0
   m_Name: TwoTimerShadow
@@ -112,6 +113,22 @@ Transform:
   - {fileID: 1150797178226687803}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5417980612749450463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3372682042073091013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 187b058fed42c86478326f8c3ec6666e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnManager: {fileID: 0}
+  greatWork: {fileID: 0}
+  ProgressText: {fileID: 0}
+  shadowBoxCollider: {fileID: 0}
 --- !u!61 &6753077095808326639
 BoxCollider2D:
   m_ObjectHideFlags: 0

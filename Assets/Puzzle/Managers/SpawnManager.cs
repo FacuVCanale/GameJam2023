@@ -22,6 +22,8 @@ public class SpawnManager : MonoBehaviour {
 
   public TextMeshProUGUI countText;
 
+  public GameObject greatWork;
+
     void Start() {
         originalAmount = spawnedCount;
         ChangeCountText();
@@ -85,9 +87,11 @@ public class SpawnManager : MonoBehaviour {
             spawned.AddComponent<HorizontalMovement>();
             break;
         }
-    }
-
     spawnedCount--;
+    }
+    else {
+        greatWork.SetActive(true);
+    }    
   }
 
   public void ChangeCountText() {
