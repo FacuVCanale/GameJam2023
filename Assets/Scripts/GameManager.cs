@@ -9,27 +9,42 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
 
 
-    [SerializeField] private float initialScrollSpeed;
-    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private float initialScrollSpeed; // Velocidad inicial de desplazamiento
+    [SerializeField] private TMP_Text scoreText; // Texto que muestra la puntuación
+
+    [SerializeField] private TMP_Text bombTimerText;
 
 
-    private bool isGameOver = false;
+    private float timeForRunning = 10f;
 
-    public AudioSource musicAudio;
+    private bool isGameOver = false; // Indica si el juego ha terminado
 
-    private float scrollSpeed;
-    private float timer;
-    private float timer_for_score;
-    private float meters;
-    private float gameDuration = 50000000000000f; // Duración del juego en segundos 
-    
-    private float seconds_passed = 0f;
+    public AudioSource musicAudio; // Fuente de audio para la música de fondo
 
+    private float scrollSpeed; // Velocidad de desplazamiento actual
+    private float timer; // Tiempo transcurrido
+    private float timer_for_score; // Temporizador para el cálculo de la puntuación
+    private float meters; // Medidor de distancia recorrida
+     // Duración máxima del juego en segundos
+    private float seconds_passed = 0f; // Tiempo transcurrido en segundos
 
-    public GameObject John;
+    public GameObject John; // Referencia al objeto "John" en el juego
 
     private void Awake()
     {
+
+        isGameOver = false;
+        
+        Time.timeScale = 1f;
+        seconds_passed = 0f;
+        timer = 0f;
+        timer_for_score = 0f;
+        timeForRunning = 10f;
+        meters = 0f;
+
+        // Configura la velocidad inicial
+        scrollSpeed = initialScrollSpeed;
+
         if (Instance != null && Instance != this)
         {
             Destroy(this);
@@ -47,11 +62,12 @@ public class GameManager : MonoBehaviour
             UpdateSpeed();
             UpdateTime();
             UpdateScore();
+            UpdateBombTimer();
             // Llamada al método para sumar los segundos
             //Debug.Log(seconds_passed);
 
             // Verifica si el tiempo ha transcurrido y no se ha alcanzado la cantidad de metros necesaria
-            if (seconds_passed >= gameDuration && meters < 5000)
+            if (timeForRunning<=0 && meters < 50)
             {
                 // El juego termina y se pierde
                 EndGame();
@@ -93,45 +109,38 @@ public class GameManager : MonoBehaviour
 
         timer_for_score += Time.deltaTime;
         meters = (int)(timer_for_score * scorePerSeconds);
-        scoreText.text = string.Format("Meters: {0:000000}", meters);
+        scoreText.text = string.Format("Meters: {0:00000}", meters);
+    }
+
+     private void UpdateBombTimer()
+    {
+        timeForRunning -= Time.deltaTime;
+        bombTimerText.text = string.Format("Time Left: {0:00000}", Mathf.Max(0, (int)timeForRunning));
     }
 
     
 
     
 
+
+
   private void EndGame()
   {
 
+    isGameOver = true;
     musicAudio.Stop();
 
-    isGameOver = true;
-
+    
     // Congela el tiempo 
     Time.timeScale = 0f; 
 
     
-
-    // Carga la escena de Game Over después de unos segundos
-    Invoke("LoadGameOverScene", 0.3f);
-  }
-
-  void LoadGameOverScene()
-  {
     SceneManager.LoadScene(2); 
+    // Carga la escena de Game Over después de unos segundos
+    
   }
 
 
-  //AGREGAR PARA LA ESCENA DE MUERTE: 
-  /* Invoke("ReloadGameScene", 5f);
-}
+ 
 
-void ReloadGameScene()
-{
-  // Reinicia la música
-  musicAudio.Play(); 
-  
-  // Recarga la escena del juego
-  SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
-} */
 }

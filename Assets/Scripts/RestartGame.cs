@@ -6,17 +6,15 @@ public class RestartGame : MonoBehaviour
 {
   public GameObject canvas;
 
-        public void RestartButton()
-        {
-            // Desactiva el Canvas
-            
-            canvas.SetActive(false);
-            // Carga la escena 0
+  public void RestartButton()
+  {
+    // Desactiva el Canvas
+    canvas.SetActive(false); 
 
-            SceneManager.LoadScene(0);
-            
-        }
+    // Reinicia todas las escenas 
+    SceneManager.LoadScene(0, LoadSceneMode.Single);
 
-    
   }
+
+}
 
