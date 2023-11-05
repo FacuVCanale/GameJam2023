@@ -147,6 +147,18 @@ public class Shadow : MonoBehaviour
             Debug.Log(ShowMatrix());
         }
 
+        if (Input.GetKeyDown(KeyCode.K)) {
+            greatWork.SetActive(true);
+                if(messageIndex == 1){
+                    message1.SetActive(true);
+                }
+                else if(messageIndex == 2){
+                    message2.SetActive(true);
+                }
+                else if(messageIndex == 3){
+                    message3.SetActive(true);
+                }
+        }
         
 
         }

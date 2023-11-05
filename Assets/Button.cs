@@ -66,6 +66,8 @@ public class Button : MonoBehaviour
         progressIndex += 1;
 
         GameObject.Find("SpawnManager").GetComponent<SpawnManager>().ResetSpawnManager();
+
+        Debug.Log("Shadow index is " + shadowIndex);
     }
     
 }
