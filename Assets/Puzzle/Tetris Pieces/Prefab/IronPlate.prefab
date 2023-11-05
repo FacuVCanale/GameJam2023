@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8863292255220439712}
   - component: {fileID: 7341902965738722642}
+  - component: {fileID: -6430607841157789092}
   m_Layer: 0
   m_Name: IronPlate
   m_TagString: Untagged
@@ -84,3 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6430607841157789092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7547735301868775155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd4e4412cd6bc0d4fae92017ab4e9fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
