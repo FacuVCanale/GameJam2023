@@ -27,21 +27,21 @@ public class GameManager : MonoBehaviour
     private float meters; // Medidor de distancia recorrida
      // Duración máxima del juego en segundos
     private float seconds_passed = 0f; // Tiempo transcurrido en segundos
-
+    private int toPass;
     public GameObject John; // Referencia al objeto "John" en el juego
 
     private void Awake()
     {
 
         isGameOver = false;
-        
+
         Time.timeScale = 1f;
         seconds_passed = 0f;
         timer = 0f;
         timer_for_score = 0f;
         timeForRunning = 111f;
         meters = 0f;
-
+        toPass = UpdateMeters();
         // Configura la velocidad inicial
         scrollSpeed = initialScrollSpeed;
 
@@ -59,6 +59,7 @@ public class GameManager : MonoBehaviour
     {
         if (!isGameOver)
         {
+            
             UpdateSpeed();
             UpdateTime();
             UpdateScore();
@@ -68,13 +69,29 @@ public class GameManager : MonoBehaviour
             //Debug.Log(seconds_passed);
 
             // Verifica si el tiempo ha transcurrido y no se ha alcanzado la cantidad de metros necesaria
-            if (timeForRunning<=0 && meters < 1000)
+            if (timeForRunning<=0)
             {
-                Debug.Log(meters);
-                // El juego termina y se pierde
-                EndGame();
+                if (toPass>0)
+                {
+                    EndGame();
+                }
+                else {
+                    Debug.Log("Win")
+                }
+                
+            }
+            else
+            {
+                if (toPass<=0)
+                {
+                    Debug.Log("Win")
+                }
             }
         }
+    }
+    private int UpdateMeters()
+    {
+        return ScoreManager.GetScore() * 7;
     }
 
     private void UpdateTime()
@@ -109,9 +126,8 @@ public class GameManager : MonoBehaviour
     {
         float scorePerSeconds = 3 + (scrollSpeed / 2f);
 
-        timer_for_score += Time.deltaTime * scorePerSeconds;
-        meters = (int)(timer_for_score);
-        scoreText.text = string.Format("Meters: {0:00000}", meters);
+        toPass -= Time.deltaTime * scorePerSeconds;
+        scoreText.text = string.Format("Meters: {0:00000}", toPass);
     }
 
      private void UpdateBombTimer()
