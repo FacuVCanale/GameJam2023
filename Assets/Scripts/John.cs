@@ -40,26 +40,21 @@ public class John : MonoBehaviour
             if (collision.gameObject.name.Contains("Box")) 
             {
                 GameManager.Instance.EraseHype(0.7f); 
-                collision.gameObject.GetComponent<Animator>().SetBool("Died", true);
-                RemoveBoxCollider(collision.gameObject); 
             }
             else if (collision.gameObject.name.Contains("Pipes"))
             {
             GameManager.Instance.EraseHype(0.5f);
-            collision.gameObject.GetComponent<Animator>().SetBool("Died", true);
-            RemoveBoxCollider(collision.gameObject); 
             }
             else if (collision.gameObject.name.Contains("Pipe")) 
             {
             GameManager.Instance.EraseHype(0.3f);
-            collision.gameObject.GetComponent<Animator>().SetBool("Died", true);
-            RemoveBoxCollider(collision.gameObject);
             }
             else if (collision.gameObject.name.Contains("Stairs")) 
             {
             GameManager.Instance.EraseHype(0.1f);
-            Destroy(collision.gameObject);
             }
+            collision.gameObject.GetComponent<Animator>().SetBool("Died", true);
+            RemoveBoxCollider(collision.gameObject);
 
 
         void RemoveBoxCollider(GameObject box) {

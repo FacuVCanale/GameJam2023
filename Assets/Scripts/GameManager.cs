@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         seconds_passed = 0f;
         timer = 0f;
         timer_for_score = 0f;
-        timeForRunning = 10f;
+        timeForRunning = 100000000f;
         meters = 0f;
 
         // Configura la velocidad inicial

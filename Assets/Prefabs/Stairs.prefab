@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2676276091609469833}
   - component: {fileID: 3092480684289121969}
+  - component: {fileID: 9179511539255379438}
   - component: {fileID: 3510918229610596482}
   - component: {fileID: 5215626246487295259}
   - component: {fileID: 5737198917146397163}
-  - component: {fileID: 9179511539255379438}
+  - component: {fileID: -7077055686193948157}
   m_Layer: 6
   m_Name: Stairs
   m_TagString: Obstacle
@@ -88,6 +89,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &9179511539255379438
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560003868745092083}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.003139019, y: -0.10329783}
+  m_SpriteTilingProperty:
+    border: {x: 0.58, y: 0.45, z: 0.63, w: 0.79999995}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.52, y: 2.24}
+    newSize: {x: 0.91, y: 0.79}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.2562628, y: 0.85041165}
+  m_EdgeRadius: 0
 --- !u!61 &3510918229610596482
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -172,48 +218,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc130c55dd9e986479a933262d42b193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &9179511539255379438
-BoxCollider2D:
+--- !u!95 &-7077055686193948157
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560003868745092083}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.003139019, y: -0.10329783}
-  m_SpriteTilingProperty:
-    border: {x: 0.58, y: 0.45, z: 0.63, w: 0.79999995}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.52, y: 2.24}
-    newSize: {x: 0.91, y: 0.79}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2.2562628, y: 0.85041165}
-  m_EdgeRadius: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9c7a22e18942b4045931e7fffc68e894, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
