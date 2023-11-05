@@ -127,7 +127,7 @@ public class GameManager : MonoBehaviour
     {
         float scorePerSeconds = 3 + (scrollSpeed / 2f);
 
-        toPass -= Mathf.CeilToInt(Time.deltaTime * scorePerSeconds);
+        toPass -= Time.deltaTime * scorePerSeconds;
         scoreText.text = string.Format("Meters: {0:00000}", toPass);
     }
 
