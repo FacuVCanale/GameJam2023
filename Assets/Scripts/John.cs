@@ -8,6 +8,7 @@ public class John : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask ground;
     [SerializeField] private float radius;
+    BoxCollider2D boxCollider;
 
     private Rigidbody2D dinoRb;
     private Animator dinoAnimator;
@@ -16,6 +17,8 @@ public class John : MonoBehaviour
     {
         dinoRb = GetComponent<Rigidbody2D>();
         dinoAnimator = GetComponent<Animator>();
+        
+
     }
 
     // Update is called once per frame
@@ -33,23 +36,39 @@ public class John : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Obstacle")) {
-            Destroy(collision.gameObject);
+            
             if (collision.gameObject.name.Contains("Box")) 
             {
-            GameManager.Instance.EraseHype(0.7f); 
+                collision.gameObject.GetComponent<Animator>().SetBool("Dieded", true);
+                RemoveBoxCollider(collision.gameObject); 
+                GameManager.Instance.EraseHype(0.7f); 
             }
             else if (collision.gameObject.name.Contains("Down")) 
             {
-            GameManager.Instance.EraseHype(0.5f); 
+            GameManager.Instance.EraseHype(0.5f);
+            Destroy(collision.gameObject);
             }
             else if (collision.gameObject.name.Contains("Stairs")) 
             {
-            GameManager.Instance.EraseHype(0.1f); 
+            GameManager.Instance.EraseHype(0.1f);
+            Destroy(collision.gameObject);
             }
             else
             {
-            GameManager.Instance.EraseHype(0.3f); 
+            GameManager.Instance.EraseHype(0.3f);
+            Destroy(collision.gameObject);
             }
+
+        void RemoveBoxCollider(GameObject box) {
+
+            BoxCollider2D boxCollider = box.GetComponent<BoxCollider2D>();
+
+                if(boxCollider != null) {
+                    box.GetComponent<BoxCollider2D>().enabled = false;
+                }
+
+        }
+            
         }
     }
 }
