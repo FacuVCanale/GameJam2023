@@ -113,12 +113,12 @@ public class GameManager : MonoBehaviour
     
 
     // Carga la escena de Game Over después de unos segundos
-    Invoke("LoadGameOverScene", 1f);
+    Invoke("LoadGameOverScene", 0.3f);
   }
 
   void LoadGameOverScene()
   {
-    SceneManager.LoadScene("EndScene"); 
+    SceneManager.LoadScene(2); 
   }
 
 
