@@ -7,7 +7,6 @@ using TMPro;
 public class Shadow : MonoBehaviour
 {
     public int[,] gridMatrix;
-
     
     private GameObject piece;
     public GameObject spawnManager;
@@ -19,11 +18,38 @@ public class Shadow : MonoBehaviour
     public BoxCollider2D shadowBoxCollider;
     private Bounds bounds;
 
-    private int errors;
+    private int errorsOutsideBoundingBox = 0;
+    private int errorsInBoundingBox = 0;
 
     void Start() {
-        bounds = GetComponent<BoxCollider2D>().bounds; 
-        gridMatrix = new int[Mathf.CeilToInt(bounds.size.x), Mathf.CeilToInt(bounds.size.y)];
+        bounds = GetComponent<BoxCollider2D>().bounds;
+        Debug.Log("Grid Matrix size is " + bounds.size.x + " x " + bounds.size.y);
+        int[,] ContainerArray = this.GetComponent<ContainerShadowArray>().GetGridMatrix();
+        if (ContainerArray != null) {
+            gridMatrix = ContainerArray;
+        }
+        else {
+            int[,] ChipArray = this.GetComponent<ChipShadowArray>().GetGridMatrix();
+            if (ChipArray != null) {
+                gridMatrix = ChipArray;
+            }
+            else {
+                int[,] OxygenArray = this.GetComponent<OxygenShadowArray>().GetGridMatrix();
+                if (OxygenArray != null) {
+                    gridMatrix = OxygenArray;
+                }
+                else {
+                    int[,] TimerArray = this.GetComponent<TimerShadowArray>().GetGridMatrix();
+                    if (TimerArray != null) {
+                        gridMatrix = TimerArray;
+                    }
+                    else {
+                        Debug.Log("No shadow array found");
+                    }
+            }
+            
+        }
+        
     }
 
     void Update() {
@@ -50,12 +76,12 @@ public class Shadow : MonoBehaviour
 
                 try {
                     if (gridMatrix[x, y] == -1) {
-                        errors += 1;
+                        errorsInBoundingBox += 1;
                     }
                     // Set matrix value
                     gridMatrix[x, y] = 1;
                 } catch (IndexOutOfRangeException e) {
-                    errors += 1;
+                    errorsOutsideBoundingBox += 1;
                 }
             }
             if(IsMatrixFull()){
@@ -77,15 +103,11 @@ public class Shadow : MonoBehaviour
         ProgressBarAdjuster.transform.localScale = new Vector3(GetMatrixFillPercentage() / 100f, 1f, 1f);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    void OnTriggerEnter2D(Collider2D other) {
         piece = other.gameObject;
     }
 
-    private void OnTriggerStay2D(Collider2D other) {
-        piece = other.gameObject;
-    }
-
-    private void OnTriggerExit2D(Collider2D other) {
+    void OnTriggerExit2D(Collider2D other) {
         piece = null;
     }
 
@@ -118,4 +140,5 @@ public class Shadow : MonoBehaviour
         return true;
 
     }
+}
 }
