@@ -77,8 +77,7 @@ public class GameManager : MonoBehaviour
                     EndGame();
                 }
                 else {
-                    Debug.Log("win");
-                    
+                    Debug.Log("Win");
                 }
                 
             }
@@ -86,8 +85,7 @@ public class GameManager : MonoBehaviour
             {
                 if (toPass<=0)
                 {
-                   
-                    Debug.Log("win");
+                    Debug.Log("Win");
                 }
             }
         }
@@ -129,7 +127,7 @@ public class GameManager : MonoBehaviour
     {
         float scorePerSeconds = 3 + (scrollSpeed / 2f);
 
-        toPass -= Time.deltaTime * scorePerSeconds;
+        toPass -= Mathf.CeilToInt(Time.deltaTime * scorePerSeconds);
         scoreText.text = string.Format("Meters: {0:00000}", toPass);
     }
 
