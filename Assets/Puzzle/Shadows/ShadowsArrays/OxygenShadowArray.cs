@@ -5,9 +5,8 @@ using UnityEngine;
 public class OxygenShadowArray : MonoBehaviour
 {
     public int[,] gridMatrix;
-    // Start is called before the first frame update
-    void Start()
-    {
+
+    public int[,] GetGridMatrix() {
         gridMatrix = new int[10,8];
         for (int i = 0; i < 10; i++) {
             if (i == 0 || i == 9) {
@@ -16,18 +15,16 @@ public class OxygenShadowArray : MonoBehaviour
                     gridMatrix[i,j] = -1;
                     }
                 }
-                if (i == 4 && i == 5) {
-                    for (int j = 0; j < 8; j++) {
-                        if (j != 3 && j != 4) {
-                            gridMatrix[i,j] = -1;
-                        }
+            }
+            if (i == 4 || i == 5) {
+                for (int j = 0; j < 8; j++) {
+                    if (j != 3 && j != 4) {
+                        gridMatrix[i,j] = -1;
                     }
                 }
             }
         }
-    }
-
-    public int[,] GetGridMatrix() {
         return gridMatrix;
     }
 }
+    

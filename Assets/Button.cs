@@ -14,7 +14,7 @@ public class Button : MonoBehaviour
     public GameObject message2;
     public GameObject message3;
 
-    
+    public GameObject ScoreManager;    
     
     private int shadowIndex = 1;
     private int progressIndex = 1;
@@ -66,6 +66,8 @@ public class Button : MonoBehaviour
         progressIndex += 1;
 
         GameObject.Find("SpawnManager").GetComponent<SpawnManager>().ResetSpawnManager();
+
+        Debug.Log("Shadow index is " + shadowIndex);
     }
     
 }
