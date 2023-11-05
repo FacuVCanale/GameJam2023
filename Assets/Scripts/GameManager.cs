@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
             {
                 if (toPass<=0)
                 {
-                    Debug.Log("Win");
+                    WinGame();
                 }
             }
         }
@@ -155,6 +155,23 @@ public class GameManager : MonoBehaviour
 
     
     SceneManager.LoadScene(2); 
+    // Carga la escena de Game Over después de unos segundos
+    
+  }
+
+
+ private void WinGame()
+  {
+
+    isGameOver = true;
+    musicAudio.Stop();
+
+    
+    // Congela el tiempo 
+    Time.timeScale = 0f; 
+
+    
+    SceneManager.LoadScene("WinScene"); 
     // Carga la escena de Game Over después de unos segundos
     
   }
