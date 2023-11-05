@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
+
     [SerializeField] private float initialScrollSpeed;
     [SerializeField] private TMP_Text scoreText;
 
