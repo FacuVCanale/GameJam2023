@@ -208,6 +208,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1439810191}
     - target: {fileID: 5417980612749450463, guid: 181b093398d4d4c49bcf731c4caf9fa7, type: 3}
+      propertyPath: ScoreManager
+      value: 
+      objectReference: {fileID: 2130535267}
+    - target: {fileID: 5417980612749450463, guid: 181b093398d4d4c49bcf731c4caf9fa7, type: 3}
       propertyPath: spawnManager
       value: 
       objectReference: {fileID: 140653035}
@@ -1916,6 +1920,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1439810191}
     - target: {fileID: -6588570931257245830, guid: 57b36ba0947b41f42a2a7948d70a930a, type: 3}
+      propertyPath: ScoreManager
+      value: 
+      objectReference: {fileID: 2130535267}
+    - target: {fileID: -6588570931257245830, guid: 57b36ba0947b41f42a2a7948d70a930a, type: 3}
       propertyPath: spawnManager
       value: 
       objectReference: {fileID: 140653035}
@@ -2422,6 +2430,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1439810191}
     - target: {fileID: -8933247133215622960, guid: 9e976ce2d8182d94c96dd063d918d92f, type: 3}
+      propertyPath: ScoreManager
+      value: 
+      objectReference: {fileID: 2130535267}
+    - target: {fileID: -8933247133215622960, guid: 9e976ce2d8182d94c96dd063d918d92f, type: 3}
       propertyPath: spawnManager
       value: 
       objectReference: {fileID: 140653035}
@@ -2525,6 +2537,10 @@ PrefabInstance:
       propertyPath: ProgressText
       value: 
       objectReference: {fileID: 1439810191}
+    - target: {fileID: -2102639553985063194, guid: 42a3b78340f067e4487d7b9c6d216b0e, type: 3}
+      propertyPath: ScoreManager
+      value: 
+      objectReference: {fileID: 2130535267}
     - target: {fileID: -2102639553985063194, guid: 42a3b78340f067e4487d7b9c6d216b0e, type: 3}
       propertyPath: spawnManager
       value: 
@@ -4419,6 +4435,7 @@ Transform:
   m_Children:
   - {fileID: 480068562}
   - {fileID: 1718836075}
+  - {fileID: 2130535269}
   m_Father: {fileID: 1838895595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2039199602
@@ -4517,6 +4534,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1ae03c49578c64f9267d1ee7ea102f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2130535267
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2130535269}
+  - component: {fileID: 2130535268}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2130535268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130535267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e0c29a61ba72b449ce9acbaad3c4aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &2130535269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130535267}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 25, y: 25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2037619169}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &530558206822693797
 PrefabInstance:
   m_ObjectHideFlags: 0

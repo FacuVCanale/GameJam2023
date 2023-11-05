@@ -13,16 +13,11 @@ public class Button : MonoBehaviour
     public GameObject message1;
     public GameObject message2;
     public GameObject message3;
-
-    public GameObject ScoreManager;    
     
     private int shadowIndex = 1;
     private int progressIndex = 1;
 
 
-    void Start() {
-        // Get an array of all the child GameObjects
-    }
 
     public void OnButtonPress() {
         // Get an array of all the game objects with the tag "TetrisPiece"
@@ -37,13 +32,10 @@ public class Button : MonoBehaviour
         foreach (GameObject tetrisPiece in tetrisPieces) {
             Destroy(tetrisPiece);
         }
-
-        for (int i = 0; i < shadows.Length; i++) {
-            Debug.Log(shadows[i].name);
-        }
-
+        
 
         if (shadowIndex > 0) {
+            ScoreManager.SumLevelScore(shadows[shadowIndex-1].GetComponent<Shadow>().GetMatrixFillPercentage());
             shadows[shadowIndex-1].SetActive(false);
         }
 
@@ -53,8 +45,11 @@ public class Button : MonoBehaviour
 
 
         if (shadowIndex >= shadows.Length) {
+            ScoreManager.AverageScore(shadows.Length);
+            Debug.Log("Score: " + ScoreManager.GetScore());
             //Pasar a la escena runner
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            shadowIndex = 1;
         }
         shadows[shadowIndex].SetActive(true);
         shadowIndex += 1;

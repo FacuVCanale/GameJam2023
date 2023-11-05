@@ -21,8 +21,6 @@ public class Shadow : MonoBehaviour
     public GameObject message1;
     public GameObject message2;
     public GameObject message3;
-
-    public GameObject ScoreManager;
     private Bounds bounds;
 
     private int errorsOutsideBoundingBox = 0;
@@ -130,7 +128,7 @@ public class Shadow : MonoBehaviour
                 else if(messageIndex == 3){
                     message3.SetActive(true);
                 }
-                ScoreManager.GetComponent<ScoreManager>().SumLevelScore(GetMatrixFillPercentage());
+                ScoreManager.SumLevelScore(GetMatrixFillPercentage());
             }
             else{
                 spawnManager.GetComponent<SpawnManager>().ready = true;
@@ -173,7 +171,7 @@ public class Shadow : MonoBehaviour
         piece = null;
     }
 
-    int GetMatrixFillPercentage() {
+    public int GetMatrixFillPercentage() {
         int filledCells = 0;
 
         for (int i = 0; i < gridMatrix.GetLength(0); i++) {

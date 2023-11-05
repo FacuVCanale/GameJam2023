@@ -33,6 +33,7 @@ private int messageIndex = 3;
   public GameObject greatWork;
 
     void Start() {
+        ScoreManager.ResetScore();
         originalAmount = spawnedCount;
         ChangeCountText();
     }
