@@ -37,6 +37,14 @@ public class John : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Obstacle")) {
             
+            if (collision.gameObject.name.Contains("High")) 
+            {
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+            collision.gameObject.GetComponent<Animator>().SetBool("Died", true);
+            RemoveBoxCollider(collision.gameObject);
             if (collision.gameObject.name.Contains("Box")) 
             {
                 GameManager.Instance.EraseHype(0.5f); 
@@ -45,7 +53,7 @@ public class John : MonoBehaviour
             {
             GameManager.Instance.EraseHype(0.3f);
             }
-            else if (collision.gameObject.name.Contains("Pipe")) 
+            else if (collision.gameObject.name.Contains("Down")) 
             {
             GameManager.Instance.EraseHype(0.1f);
             }
@@ -53,8 +61,9 @@ public class John : MonoBehaviour
             {
             GameManager.Instance.EraseHype(0.05f);
             }
-            collision.gameObject.GetComponent<Animator>().SetBool("Died", true);
-            RemoveBoxCollider(collision.gameObject);
+            }
+
+
 
 
         void RemoveBoxCollider(GameObject box) {

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5737198917146397163}
   - component: {fileID: -3479854927064780882}
   m_Layer: 6
-  m_Name: DownPipe
+  m_Name: Down
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
