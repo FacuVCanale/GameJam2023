@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 3510918229610596482}
   - component: {fileID: 5215626246487295259}
   - component: {fileID: 5737198917146397163}
-  - component: {fileID: 91682647738395532}
   - component: {fileID: 9179511539255379438}
   m_Layer: 6
   m_Name: DownPipe
@@ -171,18 +170,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bc130c55dd9e986479a933262d42b193, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &91682647738395532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560003868745092083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f0bb64568a5b4a49a0b5fe302a2b6ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &9179511539255379438
