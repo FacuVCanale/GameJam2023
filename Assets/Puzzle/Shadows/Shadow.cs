@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEditor.VersionControl;
 
 public class Shadow : MonoBehaviour
 {
@@ -16,10 +17,14 @@ public class Shadow : MonoBehaviour
     public GameObject ProgressBarAdjuster;
     
     public BoxCollider2D shadowBoxCollider;
+    public GameObject message1;
+    public GameObject message2;
+    public GameObject message3;
     private Bounds bounds;
 
     private int errorsOutsideBoundingBox = 0;
     private int errorsInBoundingBox = 0;
+    int messageIndex = 3;
 
     void Start() {
         bounds = GetComponent<BoxCollider2D>().bounds;
@@ -56,6 +61,13 @@ public class Shadow : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && piece != null) {
             piece.GetComponent<TetrisPieces>().moveDirection = Vector3.zero;
 
+            if (GetMatrixFillPercentage() >= 75) {
+                messageIndex = 1;
+            }
+            else if (GetMatrixFillPercentage() >= 30 ) {
+                messageIndex = 2;
+            }
+
             HorizontalMovement componentToRemove = piece.GetComponent<HorizontalMovement>();
             if (componentToRemove != null) {
                 Destroy(componentToRemove);
@@ -86,6 +98,15 @@ public class Shadow : MonoBehaviour
             }
             if(IsMatrixFull()){
                 greatWork.SetActive(true);
+                if(messageIndex == 1){
+                    message1.SetActive(true);
+                }
+                else if(messageIndex == 2){
+                    message2.SetActive(true);
+                }
+                else if(messageIndex == 3){
+                    message3.SetActive(true);
+                }
             }
             else{
                 spawnManager.GetComponent<SpawnManager>().ready = true;
@@ -111,7 +132,7 @@ public class Shadow : MonoBehaviour
         piece = null;
     }
 
-    float GetMatrixFillPercentage() {
+    public float GetMatrixFillPercentage() {
 
     int totalCells = gridMatrix.GetLength(0) * gridMatrix.GetLength(1);
     int filledCells = 0;
