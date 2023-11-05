@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEditor.VersionControl;
+using System.Text;
 
 public class Shadow : MonoBehaviour
 {
@@ -69,6 +70,9 @@ public class Shadow : MonoBehaviour
                 }
             }
         }
+        
+        ProgressText.text = "Progress:\n\n" + GetMatrixFillPercentage() + "%";
+            ProgressBarAdjuster.transform.localScale = new Vector3(GetMatrixFillPercentage() / 100f, 1f, 1f);
     }
     
 
@@ -105,8 +109,10 @@ public class Shadow : MonoBehaviour
                     if (gridMatrix[x, y] == -1) {
                         errorsInBoundingBox += 1;
                     }
-                    // Set matrix value
-                    gridMatrix[x, y] = 1;
+                    else {
+                        // Set matrix value
+                        gridMatrix[x, y] = 1;
+                    }
                 } catch (IndexOutOfRangeException e) {
                     errorsOutsideBoundingBox += 1;
                 }
@@ -138,6 +144,7 @@ public class Shadow : MonoBehaviour
             Debug.Log("Matrix full: " + IsMatrixFull());
             Debug.Log("Errors in bounding box: " + errorsInBoundingBox);
             Debug.Log("Errors outside bounding box: " + errorsOutsideBoundingBox);
+            Debug.Log(ShowMatrix());
         }
 
         
@@ -180,6 +187,18 @@ public class Shadow : MonoBehaviour
         }
         return true;
 
+    }
+
+    private string ShowMatrix() {
+        StringBuilder sb = new StringBuilder();
+        for (int j = 0; j < bounds.size.y; j++) {
+            for (int i = 0; i < bounds.size.x; i++) {
+                sb.Append(gridMatrix[i, j]);
+                sb.Append(" ");
+            }
+            sb.AppendLine();
+        }
+        return sb.ToString();
     }
 }
 
