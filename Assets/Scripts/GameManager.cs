@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     private float timer;
     private float timer_for_score;
     private float meters;
-    private float gameDuration = 5f; // Duración del juego en segundos 
+    private float gameDuration = 50000000000000f; // Duración del juego en segundos 
     
     private float seconds_passed = 0f;
 
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
             UpdateTime();
             UpdateScore();
             // Llamada al método para sumar los segundos
-            Debug.Log(seconds_passed);
+            //Debug.Log(seconds_passed);
 
             // Verifica si el tiempo ha transcurrido y no se ha alcanzado la cantidad de metros necesaria
             if (seconds_passed >= gameDuration && meters < 5000)

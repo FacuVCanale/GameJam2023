@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 3510918229610596482}
   - component: {fileID: 5215626246487295259}
   - component: {fileID: 5737198917146397163}
-  - component: {fileID: -3479854927064780882}
+  - component: {fileID: -6282457902123540718}
   m_Layer: 6
-  m_Name: DownPipe
+  m_Name: Pipes
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 560003868745092083}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9177, y: -0.4409, z: 0}
-  m_LocalScale: {x: 2.3255312, y: 2.1463692, z: 1}
+  m_LocalPosition: {x: 0.7341, y: -0.5529, z: 0}
+  m_LocalScale: {x: 1.55243, y: 1.1390264, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7c53f1984a2cb9d449ee0f1354f027ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c2434c4b9d6be449a00ce1bf826fd99, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,18 +121,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009097338, y: 0.0451444}
+  m_Offset: {x: -0.012976721, y: -0.22614223}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 0.27}
+    border: {x: 0.47, y: 0.26999998, z: 0.48999998, w: 0.7}
+    pivot: {x: 0.49789307, y: 0.64138395}
+    oldSize: {x: 1.5, y: 1.9}
     newSize: {x: 0.91, y: 0.79}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2116494, y: 0.19077553}
+  m_Size: {x: 0.57260513, y: 0.44688785}
   m_EdgeRadius: 0
 --- !u!61 &3510918229610596482
 BoxCollider2D:
@@ -166,18 +166,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.6164206, y: -0.0019184537}
+  m_Offset: {x: -0.33929467, y: -0.41436753}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.22, y: 0.27}
+    border: {x: 0.47, y: 0.26999998, z: 0.48999998, w: 0.7}
+    pivot: {x: 0.49789307, y: 0.64138395}
+    oldSize: {x: 1.5, y: 1.9}
     newSize: {x: 0.91, y: 0.79}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.02496314, y: 0.17581749}
+  m_Size: {x: 0.04837823, y: 0.7698974}
   m_EdgeRadius: 0
 --- !u!50 &5215626246487295259
 Rigidbody2D:
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc130c55dd9e986479a933262d42b193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &-3479854927064780882
+--- !u!95 &-6282457902123540718
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -228,7 +228,7 @@ Animator:
   m_GameObject: {fileID: 560003868745092083}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 56741074448d1744b92e9e442151ffc4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 19a2ce9623a8fbf4ebabd58500d7dbfe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
