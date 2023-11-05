@@ -27,7 +27,8 @@ public class GameManager : MonoBehaviour
     private float meters; // Medidor de distancia recorrida
      // Duración máxima del juego en segundos
     private float seconds_passed = 0f; // Tiempo transcurrido en segundos
-    private int toPass;
+    private float toPass;
+    [SerializeField] Camera mainCamera; 
     public GameObject John; // Referencia al objeto "John" en el juego
 
     private void Awake()
@@ -76,7 +77,8 @@ public class GameManager : MonoBehaviour
                     EndGame();
                 }
                 else {
-                    Debug.Log("Win")
+                    Debug.Log("win");
+                    
                 }
                 
             }
@@ -84,14 +86,15 @@ public class GameManager : MonoBehaviour
             {
                 if (toPass<=0)
                 {
-                    Debug.Log("Win")
+                   
+                    Debug.Log("win");
                 }
             }
         }
     }
-    private int UpdateMeters()
+    private float UpdateMeters()
     {
-        return ScoreManager.GetScore() * 7;
+        return (float)(ScoreManager.GetScore() * 7);
     }
 
     private void UpdateTime()
@@ -157,6 +160,8 @@ public class GameManager : MonoBehaviour
     // Carga la escena de Game Over después de unos segundos
     
   }
+
+
 
 
  

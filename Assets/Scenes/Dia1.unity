@@ -1893,6 +1893,7 @@ MonoBehaviour:
   scoreText: {fileID: 214301708}
   bombTimerText: {fileID: 1110802067}
   musicAudio: {fileID: 2054027197}
+  mainCamera: {fileID: 1160815666}
   John: {fileID: 1794423426}
 --- !u!4 &2054027196
 Transform:
