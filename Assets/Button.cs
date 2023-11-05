@@ -14,7 +14,7 @@ public class Button : MonoBehaviour
     public GameObject message2;
     public GameObject message3;
 
-    
+    public GameObject ScoreManager;    
     
     private int shadowIndex = 1;
     private int progressIndex = 1;
