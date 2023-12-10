@@ -1,6 +1,6 @@
 # Assembly Rush 🌀 by GameWiz
 
-![Assembly Rush Banner](<>)
+![Assembly Rush Banner](<banner.png>)
 
 ## Introduction
 
