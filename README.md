@@ -1,6 +1,6 @@
 # Assembly Rush 🌀 by GameWiz
 
-![Assembly Rush Banner](<(https://cdn.discordapp.com/attachments/1167122990056624148/1170751785661636668/banner.png?ex=65885311&is=6575de11&hm=d9ee380c9b051a127cd853187ca330f2f048234eb5332c585f067f14c46d5588&)>)
+![Assembly Rush Banner](<>)
 
 ## Introduction
 
